@@ -21,6 +21,8 @@ function addBookToLibrary() {
 }
 
 function render() {
+    while(library.firstChild) 
+            library.removeChild(library.firstChild);
     for(let i=0; i<myLibrary.length; i++){
         const card = document.createElement("div");
         const cardText = document.createElement("p");
