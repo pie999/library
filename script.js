@@ -3,6 +3,7 @@ const authorForm = document.querySelector("#author");
 const pagesForm = document.querySelector("#pages");
 const readForm = document.querySelector("#read");
 const addBookButton = document.querySelector("#addBookButton");
+const library = document.querySelector(".library");
 
 let myLibrary = [];
 
@@ -20,15 +21,29 @@ function addBookToLibrary() {
 }
 
 function render() {
-
+    for(let i=0; i<myLibrary.length; i++){
+        const card = document.createElement("div");
+        const cardText = document.createElement("p");
+        cardText.textContent = `Title: ${myLibrary[i].title}
+        Author: ${myLibrary[i].author}
+        Pages: ${myLibrary[i].pages}
+        Read : ${myLibrary[i].read}`;
+        library.appendChild(card);
+        card.appendChild(cardText);
+    }
 }
 
 function cleanForm() {
-
+    titleForm.value = "";
+    authorForm.value = "";
+    pagesForm.value = ""; 
+    readForm.value = 0;
 }
 
 addBookButton.addEventListener("click", () => {
-    addBookToLibrary();
-    render();
-    cleanForm();
+    if(titleForm.value != "" && authorForm.value != "" && pagesForm.value != ""){
+        addBookToLibrary();
+        render();
+        cleanForm();
+    }
 });
