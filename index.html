@@ -21,20 +21,23 @@
 
         <form class="form">
             <div class="form-element">
-                <label for="title">title</label>
+                <label for="title">TITLE</label>
                 <input type="text" id="title" name="title" required>
             </div>
             <div class="form-element">
-                <label for="author">author</label>
+                <label for="author">AUTHOR</label>
                 <input type="text" id="author" name="author" required>
             </div>
             <div class="form-element">
-                <label for="pages">pages</label>
+                <label for="pages">PAGES</label>
                 <input type="number" id="pages" name="pages" required>
             </div>
             <div class="form-element">
-                <label for="read">read</label>
-                <input type="checkbox" id="read" name="read">
+                <label for="read">STATUS</label>
+                <select id="read" name="read">
+                    <option value="read">Read</option>
+                    <option value="not read">Not read</option>
+                </select>
             </div>
             <button type="button" id="addBookButton">add book</button>
         </form>

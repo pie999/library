@@ -1,0 +1,50 @@
+body {
+    padding: 1vw;
+    font-family: "Roboto", sans-serif;
+    background-color: rgb(27, 27, 27);
+    color: white;
+}
+
+.header {
+
+}
+
+.form {
+    margin: 2vh 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+input, select {
+    font-size: 18px;
+    padding: 5px 10px;
+    border: 2px solid rgb(54, 54, 54);
+    background-color: rgb(27, 27, 27);
+    color: white;
+    border-radius: 5px;
+    /* outline: none; */
+}
+
+.library {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.library > * {
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    background-color: rgb(54, 54, 54);
+    padding: 5px;
+    margin: 10px;
+}
+
+

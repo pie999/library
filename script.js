@@ -16,7 +16,7 @@ function Book(title, author, pages, read) {
 
 function addBookToLibrary() {
     myLibrary.push(new Book(titleForm.value, authorForm.value,
-        pagesForm.value, readForm.checked));
+        pagesForm.value, readForm.value));
 
 }
 
@@ -42,10 +42,10 @@ function render() {
             render();
         });
 
-        cardText.textContent = `Title: ${myLibrary[i].title}
-        Author: ${myLibrary[i].author}
-        Pages: ${myLibrary[i].pages}
-        Read : ${myLibrary[i].read}`;
+        cardText.innerHTML = `Title: ${myLibrary[i].title} <br>
+        Author: ${myLibrary[i].author}<br>
+        Pages: ${myLibrary[i].pages}<br>
+        Read: ${myLibrary[i].read}`;
 
         library.appendChild(card);
         card.appendChild(cardText);
@@ -58,7 +58,7 @@ function cleanForm() {
     titleForm.value = "";
     authorForm.value = "";
     pagesForm.value = "";
-    readForm.checked = false;
+    readForm.value = "read";
 }
 
 addBookButton.addEventListener("click", () => {
